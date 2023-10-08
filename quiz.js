@@ -144,26 +144,26 @@ function unCheckRadioButtons() {
 // function for when all questions being answered
 function handleEndGame() {
     let remark = null
-    
+    let remarkColor = null
 
     // condition check for player remark and remark color
     if (playerScore <= 3) {
-        remark = "Bad Grades"
+       
        
     }
     else if (playerScore >= 4 && playerScore < 7) {
         remark = "Average Grades"
-     
+        
     }
     else if (playerScore >= 7) {
         remark = "Excellent"
-     
+       
     }
     const playerGrade = (playerScore / 10) * 100
 
     //data to display to score board
     document.getElementById('remarks').innerHTML = remark
-    document.getElementById('remarks').style.color = remarkColor
+    
     document.getElementById('grade-percentage').innerHTML = playerGrade
     document.getElementById('wrong-answers').innerHTML = wrongAttempt
     document.getElementById('right-answers').innerHTML = playerScore
