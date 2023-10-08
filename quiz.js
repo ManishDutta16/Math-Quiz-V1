@@ -12,8 +12,9 @@ async function handleQuestions() {
             // const response = axios.get("http://localhost:5000/");
             // console.log(response);
 
-            const response = await fetch("http://localhost:5000/");
-            console.log(response);
+            // const response = await fetch("http://localhost:5000/");
+            // console.log(response);
+            const response = await fetch("https://math-quiz-api-v1.onrender.com/");
 
             var data = await response.json();
 
@@ -87,7 +88,14 @@ function checkForAnswer() {
    
     //checking to make sure a radio input has been checked or an option being chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-        document.getElementById('option-modal').style.display = "flex"
+        // document.getElementById('option-modal').style.display = "flex"
+        Swal.fire(
+            'Invalid',
+            'Select an option',
+            'error'
+          )
+        
+        
     }
 
     //checking if checked radio button is same as answer

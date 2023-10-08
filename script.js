@@ -54,11 +54,13 @@ const initApp = () => {
                 "isAnonymous": "${user.isAnonymous}",
                 "uid": "${user.uid}"}`
             document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+            document.getElementById('quickstart-sign-in').style.textAlign = 'center';
             
 
             
             document.getElementById('quickstart-sign-in').style.backgroundColor = 'hsl(0, 100%, 30%)'
             document.querySelector('.start').style.display='block'
+            // document.getElementsByClass('start').style.display='block'
             // document.getElementById('quickstart-sign-in').style.padding = '1rem'
             // document.getElementById('quickstart-sign-in').style.display='flex'
             // document.getElementById('quickstart-sign-in').style.justifyContent = 'center'

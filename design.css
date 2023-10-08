@@ -138,10 +138,10 @@ span.forgotpsd a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 15rem;
+    width: fit-content;
     border-radius: 15px;
     margin: 0 auto;
-    padding: 1 rem 1 rem;
+    padding-right: 1rem;
     text-align: center;
 
 }
@@ -176,7 +176,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 15rem;
+    width: fit-content;
     border-radius: 10px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
@@ -190,4 +190,6 @@ body {
     opacity: 0.3;
     cursor: pointer;
 }
-
+.sign-up p{
+    padding-right: 0.6rem;
+}
