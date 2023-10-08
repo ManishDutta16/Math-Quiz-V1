@@ -12,9 +12,9 @@ async function handleQuestions() {
             // const response = axios.get("http://localhost:5000/");
             // console.log(response);
 
-            // const response = await fetch("http://localhost:5000/");
-            // console.log(response);
-            const response = await fetch("https://math-quiz-api-v1.onrender.com/");
+            const response = await fetch("http://localhost:5000/");
+            console.log(response);
+            // const response = await fetch("https://math-quiz-api-v1.onrender.com/");
 
             var data = await response.json();
 
@@ -165,15 +165,15 @@ function handleEndGame() {
 
     // condition check for player remark and remark color
     if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
+        remark = "Bad Grades"
         remarkColor = "red"
     }
     else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
+        remark = "Average Grades"
         remarkColor = "orange"
     }
     else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
+        remark = "Excellent"
         remarkColor = "green"
     }
     const playerGrade = (playerScore / 10) * 100
@@ -196,18 +196,19 @@ function handleEndGame() {
 
 }
 
-//closes score modal and resets game
-function closeScoreModal() {
-    questionNumber = 1
-    playerScore = 0
-    wrongAttempt = 0
-    indexNumber = 0
-    shuffledQuestions = []
-    NextQuestion(indexNumber)
-    document.getElementById('score-modal').style.display = "none"
-}
 
-//function to close warning modal
-function closeOptionModal() {
-    document.getElementById('option-modal').style.display = "none"
-}
+// closes score modal and resets game
+// function closeScoreModal() {
+//     questionNumber = 1
+//     playerScore = 0
+//     wrongAttempt = 0
+//     indexNumber = 0
+//     shuffledQuestions = []
+//     NextQuestion(indexNumber)
+//     document.getElementById('score-modal').style.display = "none"
+// }
+
+// //function to close warning modal
+// function closeOptionModal() {
+//     document.getElementById('option-modal').style.display = "none"
+// }

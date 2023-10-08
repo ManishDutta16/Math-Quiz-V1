@@ -5,6 +5,7 @@
   
     // Get the button element
     var button = document.querySelector(".focus");
+    
   
     const startTimerFunc = ()=>{
         console.log("working");
