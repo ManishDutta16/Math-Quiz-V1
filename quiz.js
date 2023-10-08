@@ -3,9 +3,9 @@
 let shuffledQuestions = [] 
 
 async function handleQuestions() {
-    console.log('Hello');
+    // console.log('Hello');
     while (shuffledQuestions.length <= 9) {
-        console.log("Hello from within while-loop");
+        // console.log("Hello from within while-loop");
         try {
             const response = await fetch("http://localhost:5000/");
             console.log(response);
@@ -144,20 +144,20 @@ function unCheckRadioButtons() {
 // function for when all questions being answered
 function handleEndGame() {
     let remark = null
-    let remarkColor = null
+    
 
     // condition check for player remark and remark color
     if (playerScore <= 3) {
         remark = "Bad Grades"
-        remarkColor = "red"
+       
     }
     else if (playerScore >= 4 && playerScore < 7) {
         remark = "Average Grades"
-        remarkColor = "orange"
+     
     }
     else if (playerScore >= 7) {
         remark = "Excellent"
-        remarkColor = "green"
+     
     }
     const playerGrade = (playerScore / 10) * 100
 
