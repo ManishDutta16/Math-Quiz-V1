@@ -99,7 +99,7 @@ const initApp = () => {
             </svg>`;
             document.getElementById('quickstart-sign-in').style.backgroundColor = '#222';
             document.querySelector(".content").innerHTML = `<h2>Hi there! Get ready for an amazing quiz</h2>`;
-            document.querySelector("#user-avatar").src = `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Manish`
+            document.querySelector("#user-avatar").src = `https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Manishdutta`
             document.querySelector('.start').style.display='none'
         }
         document.getElementById('quickstart-sign-in').disabled = false;

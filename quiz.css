@@ -9,6 +9,16 @@ body {
     height: 100%;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-image: linear-gradient( #1f4037, #99f2c8);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 
 body {
     font-family: 'Montserrat', serif;
@@ -22,10 +32,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#fc4a1a, #f7b733);
-    background: url('../assets/background_image.jpg');
-    background-image: linear-gradient(#fc4a1a, #f7b733);
-    background-repeat: no-repeat;
+   
+    /* background: url('../assets/background_image.jpg'); */
+    /* background-image: linear-gradient(#fc4a1a, #f7b733);
+    background-repeat: no-repeat; */
     background-size: cover;
     background-position: center;
 }
@@ -63,7 +73,7 @@ main {
     justify-content: center;
     border: 2px solid rgb(110, 110, 108);
     border-radius: 25px;
-    background-color: rgb(118, 255, 209);
+    background-color: rgb(178, 133, 250);
 }
 
 .game-question-container h1 {
@@ -108,7 +118,7 @@ span label:hover {
     -webkit-transform: scale(1.12);
     transform: scale(1.12);
     color: rgb(54, 54, 54);
-    background-color: rgb(190, 238, 78);
+    background-color: rgb(252, 181, 134);
 }
 
 input[type="radio"] {
@@ -377,15 +387,7 @@ main {
     display: none;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh; 
-    background: linear-gradient(#fc4a1a, #f7b733);
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
+
 
 
 .quiz-info {
@@ -416,13 +418,14 @@ body {
 
 .quiz-info button {
     padding-top: 60px;
-    background-color: #47cbf3; 
+    background-color: #0453fd; 
     color: #fff; 
     font-size: 18px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    box-shadow: 4px 4px black;
 }
 
 
@@ -437,12 +440,13 @@ h1 {
 
 
 .class {
-    background-color: #f5f786;
+    background-color: #ffa074;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     display:inline-block;
     border-radius: 10px;
+    box-shadow: 4px 4px black;
 }
 
 

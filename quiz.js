@@ -1,20 +1,14 @@
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions
+let shuffledQuestions = [] 
 
-async function handleQuestions() { 
-    //function to shuffle and push 10 questions to shuffledQuestions array
+async function handleQuestions() {
     console.log('Hello');
     while (shuffledQuestions.length <= 9) {
         console.log("Hello from within while-loop");
-        // const random = questions[Math.floor(Math.random() * questions.length)]
         try {
-            // const response = axios.get("http://localhost:5000/");
-            // console.log(response);
-
             const response = await fetch("http://localhost:5000/");
             console.log(response);
-            // const response = await fetch("https://math-quiz-api-v1.onrender.com/");
 
             var data = await response.json();
 
@@ -36,8 +30,6 @@ async function handleQuestions() {
 
     console.log("shuffledQuestions[0] elsewhere: ");
     console.log(shuffledQuestions[0]);
-
-    // return shuffledQuestions;
 }
 
 
@@ -46,21 +38,18 @@ let playerScore = 0
 let wrongAttempt = 0 
 let indexNumber = 0
 
-// function for displaying next question in the array to dom
+// function for displaying next question in array
 async function NextQuestion(index) {
     await handleQuestions()
-    console.log("index:" + index); // 0
-    console.log("typeof(index):" + typeof(index)); // number
+    console.log("index:" + index); 
+    console.log("typeof(index):" + typeof(index)); 
     console.log("shuffledQuestions: "); 
-    console.log(shuffledQuestions); // questions are coming alright!
+    console.log(shuffledQuestions); 
     console.log("typeof(shuffledQuestions): ");
-    console.log(typeof(shuffledQuestions)); // object
+    console.log(typeof(shuffledQuestions)); 
     console.log("typeof(shuffledQuestions[0]): ");
     console.log(typeof(shuffledQuestions[0]));
-    console.log("shuffledQuestions[0] heck yeah: ");
-    console.log(shuffledQuestions[0]);
     const currentQuestion = shuffledQuestions[index];
-    // const currentQuestion = shuffledQuestions[0];
     console.log("currentQuestion: ");
     console.log(currentQuestion);
     document.getElementById("question-number").innerHTML = questionNumber
@@ -74,9 +63,9 @@ async function NextQuestion(index) {
 }
 
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
-    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
-    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
+    const currentQuestion = shuffledQuestions[indexNumber] 
+    const currentQuestionAnswer = currentQuestion.correctOption 
+    const options = document.getElementsByName("option");
     let correctOption = null
 
     options.forEach((option) => {
@@ -86,9 +75,8 @@ function checkForAnswer() {
         }
     })
    
-    //checking to make sure a radio input has been checked or an option being chosen
+    //checking to make sure a radio input has been checked
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-        // document.getElementById('option-modal').style.display = "flex"
         Swal.fire(
             'Invalid',
             'Select an option',
@@ -104,7 +92,6 @@ function checkForAnswer() {
             document.getElementById(correctOption).style.backgroundColor = "green"
             playerScore++
             indexNumber++
-            //set to delay question number till when next question loads
             setTimeout(() => {
                 questionNumber++
             }, 1000)
@@ -116,7 +103,6 @@ function checkForAnswer() {
             document.getElementById(correctOption).style.backgroundColor = "green"
             wrongAttempt++
             indexNumber++
-            //set to delay question number till when next question loads
             setTimeout(() => {
                 questionNumber++
             }, 1000)
@@ -124,13 +110,10 @@ function checkForAnswer() {
     })
 }
 
-
-
 //called when the next button is called
 function handleNextQuestion() {
     checkForAnswer()
     unCheckRadioButtons()
-    //delays next question displaying for a second
     setTimeout(() => {
         if (indexNumber <= 9) {
             NextQuestion(indexNumber)
@@ -139,10 +122,10 @@ function handleNextQuestion() {
             handleEndGame()
         }
         resetOptionBackground()
-    }, 1000);
+    }, 500);
 }
 
-//sets options background back to null after display the right/wrong colors
+//sets options background back to null after display the right/wrong
 function resetOptionBackground() {
     const options = document.getElementsByName("option");
     options.forEach((option) => {
@@ -195,8 +178,6 @@ function handleEndGame() {
       
 
 }
-
-
 // closes score modal and resets game
 // function closeScoreModal() {
 //     questionNumber = 1

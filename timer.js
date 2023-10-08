@@ -1,7 +1,7 @@
-// document.addEventListener("DOMContentLoaded", function () {
+
     let timerId = 0;
     // Set the time in minutes
-    var time_in_minutes = 2;
+    var time_in_minutes = 0.6;
   
     // Get the button element
     var button = document.querySelector(".focus");
@@ -35,8 +35,8 @@
         var countdown = document.getElementById("countdown");
         countdown.innerHTML = minutes + "m " + seconds + "s";
         countdown.style.color = "white";
-  
-        // If the time is up, change the background color to green
+        countdown.style.fontSize = "50px"
+
         if (t === 1000) {
             console.log("check")
             
@@ -51,12 +51,11 @@
             'info'
           )
           .then(() => {
-            // document.location.href="/";
             handleEndGame()
           });
           
         }
       }, 500);
     };
-//   });
+
   

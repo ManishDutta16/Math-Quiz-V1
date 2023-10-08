@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
     /* background: -webkit-linear-gradient(to right, #155799, #159957); */
     
-    background-image: linear-gradient(#fc4a1a, #f7b733);
+    background-image: linear-gradient(#bdc3c7, #2c3e50);
     background-repeat: no-repeat;
     min-height: 97vh;
 
@@ -180,7 +180,7 @@ body {
     border-radius: 10px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
-    background-color: rgb(6, 151, 103);
+    background-color: rgb(2, 194, 44);
     color: ghostwhite;
     text-decoration: none;
     text-align: center;
