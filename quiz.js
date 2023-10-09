@@ -7,10 +7,10 @@ async function handleQuestions() {
     while (shuffledQuestions.length <= 9) {
         // console.log("Hello from within while-loop");
         try {
-            const response = await fetch("http://localhost:5000/");
-            console.log(response);
-            // const response = await fetch("https://math-quiz-api-v1.onrender.com/");
+            // const response = await fetch("http://localhost:5000/");
             // console.log(response);
+            const response = await fetch("https://math-quiz-api-v1.onrender.com/");
+            console.log(response);
 
             var data = await response.json();
 
